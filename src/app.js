@@ -6,7 +6,11 @@ const app = express();
 
 app.use(express.json());
 
-// API routes
+// Use the database connection
+// app.listen(3306, () => {
+//     console.log("Connected to database");
+//     });
+
 app.use("/api/articles", articleRoutes);
 
 // Global error handler
