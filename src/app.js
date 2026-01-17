@@ -1,8 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const articleRoutes = require("./routes/article.routes");
 const errorHandler = require("./middlewares/error.middleware");
 
 const app = express();
+
+// Enable CORS
+app.use(cors());
 
 app.use(express.json());
 
